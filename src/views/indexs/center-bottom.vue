@@ -26,14 +26,14 @@ export default {
     this.clearData()
   },
   methods: {
-    //清理图标数据
+    //娓呯悊鍥炬爣鏁版嵁
     clearData() {
       if (this.timer) {
         clearInterval(this.timer)
         this.timer = null
       }
     },
-    //获取图标数据
+    //鑾峰彇鍥炬爣鏁版嵁
     getData() {
       this.pageflag = true
       currentGET('big6').then(res => {
@@ -45,7 +45,7 @@ export default {
         }
       })
     },
-    //轮询
+    //杞
     switper() {
       if (this.timer) {
         return
@@ -55,7 +55,7 @@ export default {
       };
       this.timer = setInterval(looper, this.$store.state.setting.echartsAutoTime);
     },
-    //初始化
+    //鍒濆鍖?
     init(newData) {
       this.options = {
         tooltip: {
@@ -66,14 +66,14 @@ export default {
             color: "#FFF",
           },
           formatter: function (params) {
-            // 添加单位
+            // 娣诲姞鍗曚綅
             var result = params[0].name + "<br>";
             params.forEach(function (item) {
               if (item.value) {
-                if (item.seriesName == "完成率") {
+                if (item.seriesName == "瀹屾垚鐜?) {
                   result += item.marker + " " + item.seriesName + " : " + item.value + "%</br>";
                 } else {
-                  result += item.marker + " " + item.seriesName + " : " + item.value + "万</br>";
+                  result += item.marker + " " + item.seriesName + " : " + item.value + "涓?/br>";
                 }
               } else {
                 result += item.marker + " " + item.seriesName + " :  - </br>";
@@ -83,7 +83,7 @@ export default {
           }
         },
         legend: {
-          data: ["已销售", "计划销售", "完成率"],
+          data: ["宸查攢鍞?, "璁″垝閿€鍞?, "瀹屾垚鐜?],
           textStyle: {
             color: "#B4B4B4"
           },
@@ -117,7 +117,7 @@ export default {
           },
 
           axisLabel: {
-            formatter: "{value}万"
+            formatter: "{value}涓?
           }
         },
         {
@@ -137,11 +137,11 @@ export default {
         series: [
 
           {
-            name: "已销售",
+            name: "宸查攢鍞?,
             type: "bar",
             barWidth: 10,
             itemStyle: {
-              barBorderRadius: 5,
+              borderRadius: 5,
               color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                 offset: 0,
                 color: "#956FD4"
@@ -155,12 +155,12 @@ export default {
             data: newData.barData
           },
           {
-            name: "计划销售",
+            name: "璁″垝閿€鍞?,
             type: "bar",
             barGap: "-100%",
             barWidth: 10,
             itemStyle: {
-              barBorderRadius: 5,
+              borderRadius: 5,
               color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                 offset: 0,
                 color: "rgba(156,107,211,0.8)"
@@ -179,7 +179,7 @@ export default {
             data: newData.lineData
           },
           {
-            name: "完成率",
+            name: "瀹屾垚鐜?,
             type: "line",
             smooth: true,
             showAllSymbol: true,

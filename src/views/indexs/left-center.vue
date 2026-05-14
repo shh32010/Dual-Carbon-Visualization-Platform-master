@@ -1,7 +1,7 @@
 <template>
   <Echart id="leftCenter" :options="options" class="left_center_inner" v-if="pageflag" ref="charts" />
   <Reacquire v-else @onclick="getData" style="line-height:200px">
-    重新获取
+    閲嶆柊鑾峰彇
   </Reacquire>
 </template>
 
@@ -31,14 +31,14 @@ export default {
 
   },
   methods: {
-    //清理报表数据
+    //娓呯悊鎶ヨ〃鏁版嵁
     clearData() {
       if (this.timer) {
         clearInterval(this.timer)
         this.timer = null
       }
     },
-    //获取报表数据
+    //鑾峰彇鎶ヨ〃鏁版嵁
     getData() {
       this.pageflag = true
       currentGET('big1').then(res => {
@@ -53,7 +53,7 @@ export default {
         }
       })
     },
-    //轮询
+    //杞
     switper() {
       if (this.timer) {
         return
@@ -70,12 +70,12 @@ export default {
         this.timer = setInterval(looper, this.$store.state.setting.echartsAutoTime);
       });
     },
-    //初始化
+    //鍒濆鍖?
     init() {
       let total = this.consumeData.totalPowerConsume + this.consumeData.totalOfficePowerConsume + this.consumeData.totalWaterConsume + this.consumeData.totalOfficeWaterConsume;
       let colors = ["#ECA444", "#33A1DB", "#56B557", "#c66863"];
       let piedata = {
-        name: "能耗占比",
+        name: "鑳借€楀崰姣?,
         type: "pie",
         radius: ["42%", "65%"],
         avoidLabelOverlap: false,
@@ -88,28 +88,28 @@ export default {
         data: [
           {
             value: this.consumeData.totalWaterConsume,
-            name: "生产用水量",
+            name: "鐢熶骇鐢ㄦ按閲?,
             label: {
               shadowColor: colors[3],
             },
           },
           {
             value: this.consumeData.totalPowerConsume,
-            name: "生产耗电量",
+            name: "鐢熶骇鑰楃數閲?,
             label: {
               shadowColor: colors[0],
             },
           },
           {
             value: this.consumeData.totalOfficePowerConsume,
-            name: "办公耗电量",
+            name: "鍔炲叕鑰楃數閲?,
             label: {
               shadowColor: colors[2],
             },
           },
           {
             value: this.consumeData.totalOfficeWaterConsume,
-            name: "办公用水量",
+            name: "鍔炲叕鐢ㄦ按閲?,
             label: {
               shadowColor: colors[1],
             },
@@ -119,7 +119,7 @@ export default {
       this.options = {
         title: {
           // zlevel: 0,
-          text: ["{value|" + total + "}", "{name|总数}"].join("\n"),
+          text: ["{value|" + total + "}", "{name|鎬绘暟}"].join("\n"),
           top: "center",
           left: "center",
           textStyle: {
@@ -151,7 +151,7 @@ export default {
           left: "center",
         },
         series: [
-          //展示圆点
+          //灞曠ず鍦嗙偣
           {
             ...piedata,
             tooltip: { show: true },
@@ -175,8 +175,8 @@ export default {
               },
             },
             labelLine: {
-              length: 20, // 第一段线 长度
-              length2: 36, // 第二段线 长度
+              length: 20, // 绗竴娈电嚎 闀垮害
+              length2: 36, // 绗簩娈电嚎 闀垮害
               show: true,
             },
             emphasis: {
@@ -190,18 +190,18 @@ export default {
             tooltip: { show: true },
             itemStyle: {},
             label: {
-              backgroundColor: "inherit", //圆点颜色，inherit：映射的系列色
+              backgroundColor: "inherit", //鍦嗙偣棰滆壊锛宨nherit锛氭槧灏勭殑绯诲垪鑹?
               height: 0,
               width: 0,
               lineHeight: 0,
               borderRadius: 2.5,
               shadowBlur: 8,
-              shadowColor: "auto",
+              shadowColor: "inherit",
               padding: [2.5, -2.5, 2.5, -2.5],
             },
             labelLine: {
-              length: 20, // 第一段线 长度
-              length2: 36, // 第二段线 长度
+              length: 20, // 绗竴娈电嚎 闀垮害
+              length2: 36, // 绗簩娈电嚎 闀垮害
               show: false,
             },
           },
