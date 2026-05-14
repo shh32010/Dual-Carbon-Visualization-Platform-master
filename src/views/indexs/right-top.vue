@@ -146,26 +146,23 @@ export default {
             name: "总销售额（万）",
             color: "rgba(252,144,16,.7)",
             areaStyle: {
-              normal: {
-                //右，下，左，上
-                color: new echarts.graphic.LinearGradient(
-                  0,
-                  0,
-                  0,
-                  1,
-                  [
-                    {
-                      offset: 0,
-                      color: "rgba(252,144,16,.7)",
-                    },
-                    {
-                      offset: 1,
-                      color: "rgba(252,144,16,.0)",
-                    },
-                  ],
-                  false
-                ),
-              },
+              //右，下，左，上
+              color: new echarts.graphic.LinearGradient(
+                0,
+                0,
+                0,
+                1,
+                [
+                  {
+                    offset: 0,
+                    color: "rgba(252,144,16,.7)",
+                  },
+                  {
+                    offset: 1,
+                    color: "rgba(252,144,16,.0)",
+                  },
+                ]
+              ),
             },
             markPoint: {
               data: [
@@ -215,26 +212,23 @@ export default {
             name: "合同额（万）",
             color: "rgba(9,202,243,.7)",
             areaStyle: {
-              normal: {
-                //右，下，左，上
-                color: new echarts.graphic.LinearGradient(
-                  0,
-                  0,
-                  0,
-                  1,
-                  [
-                    {
-                      offset: 0,
-                      color: "rgba(9,202,243,.7)",
-                    },
-                    {
-                      offset: 1,
-                      color: "rgba(9,202,243,.0)",
-                    },
-                  ],
-                  false
-                ),
-              },
+              //右，下，左，上
+              color: new echarts.graphic.LinearGradient(
+                0,
+                0,
+                0,
+                1,
+                [
+                  {
+                    offset: 0,
+                    color: "rgba(9,202,243,.7)",
+                  },
+                  {
+                    offset: 1,
+                    color: "rgba(9,202,243,.0)",
+                  },
+                ]
+              ),
             },
             markPoint: {
               data: [

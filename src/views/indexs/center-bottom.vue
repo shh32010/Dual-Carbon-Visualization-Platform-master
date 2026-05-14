@@ -141,18 +141,16 @@ export default {
             type: "bar",
             barWidth: 10,
             itemStyle: {
-              normal: {
-                barBorderRadius: 5,
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                  offset: 0,
-                  color: "#956FD4"
-                },
-                {
-                  offset: 1,
-                  color: "#3EACE5"
-                }
-                ])
+              barBorderRadius: 5,
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                offset: 0,
+                color: "#956FD4"
+              },
+              {
+                offset: 1,
+                color: "#3EACE5"
               }
+              ])
             },
             data: newData.barData
           },
@@ -162,22 +160,20 @@ export default {
             barGap: "-100%",
             barWidth: 10,
             itemStyle: {
-              normal: {
-                barBorderRadius: 5,
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                  offset: 0,
-                  color: "rgba(156,107,211,0.8)"
-                },
-                {
-                  offset: 0.2,
-                  color: "rgba(156,107,211,0.5)"
-                },
-                {
-                  offset: 1,
-                  color: "rgba(156,107,211,0.2)"
-                }
-                ])
+              barBorderRadius: 5,
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                offset: 0,
+                color: "rgba(156,107,211,0.8)"
+              },
+              {
+                offset: 0.2,
+                color: "rgba(156,107,211,0.5)"
+              },
+              {
+                offset: 1,
+                color: "rgba(156,107,211,0.2)"
               }
+              ])
             },
             z: -12,
             data: newData.lineData
@@ -191,9 +187,7 @@ export default {
             symbolSize: 8,
             yAxisIndex: 1,
             itemStyle: {
-              normal: {
-                color: "#F02FC2"
-              }
+              color: "#F02FC2"
             },
             data: newData.rateData
           },

@@ -178,7 +178,9 @@ export default {
               length: 20, // 第一段线 长度
               length2: 36, // 第二段线 长度
               show: true,
-              emphasis: {
+            },
+            emphasis: {
+              labelLine: {
                 show: true,
               },
             },
@@ -188,7 +190,7 @@ export default {
             tooltip: { show: true },
             itemStyle: {},
             label: {
-              backgroundColor: "auto", //圆点颜色，auto：映射的系列色
+              backgroundColor: "inherit", //圆点颜色，inherit：映射的系列色
               height: 0,
               width: 0,
               lineHeight: 0,
