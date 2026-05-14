@@ -231,7 +231,6 @@ export default {
                   ],
                   false
                 ),
-              },
             },
             markPoint: {
               data: [

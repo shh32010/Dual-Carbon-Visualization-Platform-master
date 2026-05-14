@@ -178,7 +178,9 @@ export default {
               length: 20, // 第一段线 长度
               length2: 36, // 第二段线 长度
               show: true,
-              emphasis: {
+            },
+            emphasis: {
+              labelLine: {
                 show: true,
               },
             },

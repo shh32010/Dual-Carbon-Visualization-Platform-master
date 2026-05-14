@@ -90,7 +90,6 @@ export default {
     getData() {
       this.pageflag = true;
       currentGET("big2").then((res) => {
-        console.log("加载centerbottom")
         if (res.success) {
           let emissionOverview = res.rows[0];
           this.waterConsumeCfg = {

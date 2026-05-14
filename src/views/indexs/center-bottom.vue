@@ -151,7 +151,6 @@ export default {
                   color: "#3EACE5"
                 }
                 ])
-              }
             },
             data: newData.barData
           },
@@ -175,7 +174,6 @@ export default {
                   color: "rgba(156,107,211,0.2)"
                 }
                 ])
-              }
             },
             z: -12,
             data: newData.lineData
@@ -190,7 +188,6 @@ export default {
             yAxisIndex: 1,
             itemStyle: {
                 color: "#F02FC2"
-              }
             },
             data: newData.rateData
           },
