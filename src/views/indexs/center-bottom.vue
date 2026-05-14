@@ -141,7 +141,6 @@ export default {
             type: "bar",
             barWidth: 10,
             itemStyle: {
-              normal: {
                 borderRadius: 5,
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                   offset: 0,
@@ -162,7 +161,6 @@ export default {
             barGap: "-100%",
             barWidth: 10,
             itemStyle: {
-              normal: {
                 borderRadius: 5,
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                   offset: 0,
@@ -191,7 +189,6 @@ export default {
             symbolSize: 8,
             yAxisIndex: 1,
             itemStyle: {
-              normal: {
                 color: "#F02FC2"
               }
             },
