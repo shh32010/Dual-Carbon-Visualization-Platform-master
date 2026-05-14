@@ -10,10 +10,10 @@
                 </div>
                 <div class="setting_body">
                     <!-- <div class="left_shu"> 实时监测</div> -->
-                    <div class="left_shu"> 全局设置</div> 
-                      <div class="setting_item">
+                    <div class="left_shu"> 全局设置</div>
+                    <div class="setting_item">
                         <span class="setting_label">
-                            是否进行自动适配<span class="setting_label_tip">(默认分辨率1920*1080)</span>: 
+                            是否进行自动适配<span class="setting_label_tip">(默认分辨率1920*1080)</span>:
                         </span>
                         <div class="setting_content">
                             <el-radio-group v-model="isScaleradio" @change="(val) => radiochange(val, 'isScale')">
@@ -63,9 +63,9 @@ export default {
     data() {
         return {
             settingShow: false,
-            sbtxradio:true,
+            sbtxradio: true,
             ssyjradio: true,
-            isScaleradio:true,
+            isScaleradio: true,
         };
     },
     computed: {},
@@ -75,7 +75,7 @@ export default {
         },
         radiochange(val, type) {
             this.$store.commit('setting/updateSwiper', { val, type })
-            if(type==='isScale'){
+            if (type === 'isScale') {
                 this.$router.go(0)
                 // location.reload()
                 // window.location.href=window.location.href+"?t="+Date.now()
@@ -85,8 +85,8 @@ export default {
     created() {
         this.$store.commit('setting/initSwipers')
         this.sbtxradio = this.$store.state.setting.sbtxSwiper,
-        this.ssyjradio = this.$store.state.setting.ssyjSwiper,
-        this.isScaleradio = this.$store.state.setting.isScale;
+            this.ssyjradio = this.$store.state.setting.ssyjSwiper,
+            this.isScaleradio = this.$store.state.setting.isScale;
     },
     mounted() {
         document.body.appendChild(this.$el);
@@ -101,5 +101,4 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped>
-</style>
+<style lang='scss' scoped></style>

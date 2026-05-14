@@ -120,19 +120,19 @@ export default {
             formatter: "{value}万"
           }
         },
-          {
-            splitLine: {
-              show: false
-            },
-            axisLine: {
-              lineStyle: {
-                color: "#B4B4B4"
-              }
-            },
-            axisLabel: {
-              formatter: "{value}% "
+        {
+          splitLine: {
+            show: false
+          },
+          axisLine: {
+            lineStyle: {
+              color: "#B4B4B4"
             }
+          },
+          axisLabel: {
+            formatter: "{value}% "
           }
+        }
         ],
         series: [
 
@@ -147,10 +147,10 @@ export default {
                   offset: 0,
                   color: "#956FD4"
                 },
-                  {
-                    offset: 1,
-                    color: "#3EACE5"
-                  }
+                {
+                  offset: 1,
+                  color: "#3EACE5"
+                }
                 ])
               }
             },
@@ -168,14 +168,14 @@ export default {
                   offset: 0,
                   color: "rgba(156,107,211,0.8)"
                 },
-                  {
-                    offset: 0.2,
-                    color: "rgba(156,107,211,0.5)"
-                  },
-                  {
-                    offset: 1,
-                    color: "rgba(156,107,211,0.2)"
-                  }
+                {
+                  offset: 0.2,
+                  color: "rgba(156,107,211,0.5)"
+                },
+                {
+                  offset: 1,
+                  color: "rgba(156,107,211,0.2)"
+                }
                 ])
               }
             },
@@ -204,6 +204,7 @@ export default {
 
 }
 </script>
+
 <style lang="scss" scoped>
 .center_bottom {
   width: 100%;

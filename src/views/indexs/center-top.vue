@@ -48,7 +48,6 @@
       </BorderBox13>
     </div>
   </div>
-
 </template>
 
 <script>

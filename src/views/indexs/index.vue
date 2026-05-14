@@ -2,15 +2,13 @@
   <div class="contents">
     <div class="contetn_left">
       <div class="pagetab">
-        <!-- <div class="item">实时监测</div> -->
-
+        <div class="item">实时监测</div>
       </div>
       <ItemWrap class="contetn_left-top contetn_lr_item" title="能耗总览">
         <LeftTop />
       </ItemWrap>
       <ItemWrap class="contetn_left-center contetn_lr_item" title="能耗占比">
         <LeftCenter />
-        <Center title="碳排放排行榜"/>
       </ItemWrap>
       <ItemWrap class="contetn_left-bottom contetn_lr_item" title="库存预警" style="padding: 0 10px 16px 10px">
         <LeftBottom />
@@ -18,7 +16,6 @@
     </div>
     <div class="contetn_center">
       <CenterTop class="contetn_center_top" />
-
       <ItemWrap class="contetn_center_bottom" title="销售计划完成率">
         <CenterBottom />
       </ItemWrap>
@@ -80,6 +77,7 @@ export default {
 <style lang="scss" scoped>
 // 内容
 .contents {
+
   .contetn_left,
   .contetn_right {
     width: 540px;
@@ -126,10 +124,12 @@ export default {
     -webkit-transform: rotate(0) scale(1);
     transform: rotate(0) scale(1);
   }
+
   50% {
     -webkit-transform: rotate(180deg) scale(1.1);
     transform: rotate(180deg) scale(1.1);
   }
+
   100% {
     -webkit-transform: rotate(360deg) scale(1);
     transform: rotate(360deg) scale(1);

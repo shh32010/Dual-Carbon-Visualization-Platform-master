@@ -6,8 +6,10 @@
 </template>
 
 <script>
+
 import { currentGET } from "@/api/modules";
 import * as echarts from 'echarts'
+
 
 export default {
   data() {
@@ -79,7 +81,7 @@ export default {
       this.option = {
         xAxis: {
           type: "category",
-          data: ['2022-04','2022-11'],
+          data: ['2022-04', '2022-11'],
           boundaryGap: false, // 不留白，从原点开始
           splitLine: {
             show: true,
@@ -137,7 +139,7 @@ export default {
         },
         series: [
           {
-            data: [34800,33600],
+            data: [34800, 33600],
             type: "line",
             smooth: true,
             symbol: "none", //去除点
@@ -206,7 +208,7 @@ export default {
             },
           },
           {
-            data: [8840,6570],
+            data: [8840, 6570],
             type: "line",
             smooth: true,
             symbol: "none", //去除点
@@ -281,6 +283,7 @@ export default {
   },
 };
 </script>
+
 <style lang='scss' scoped>
 .right_top_inner {
   margin-top: -8px;
